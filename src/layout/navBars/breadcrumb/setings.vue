@@ -646,12 +646,12 @@ onMounted(() => {
 		setTimeout(() => {
 			// 默认样式
 			onColorPickerChange();
-			// 灰色模式
-			if (getThemeConfig.value.isGrayscale) onAddFilterChange('grayscale');
-			// 色弱模式
+			// // 灰色模式
+			// if (getThemeConfig.value.isGrayscale) onAddFilterChange('grayscale');
+			// // 色弱模式
 			if (getThemeConfig.value.isInvert) onAddFilterChange('invert');
-			// 深色模式
-			if (getThemeConfig.value.isIsDark) onAddDarkChange();
+			// // 深色模式
+			// if (getThemeConfig.value.isIsDark) onAddDarkChange();
 			// 开启水印
 			onWartermarkChange();
 			// 语言国际化

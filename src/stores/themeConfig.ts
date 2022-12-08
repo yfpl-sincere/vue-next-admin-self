@@ -91,7 +91,7 @@ export const useThemeConfig = defineStore('themeConfig', {
 			// 是否开启 Footer 底部版权信息
 			isFooter: true,
 			// 是否开启灰色模式
-			isGrayscale: true,
+			isGrayscale: false,
 			// 是否开启色弱模式
 			isInvert: false,
 			// 是否开启水印

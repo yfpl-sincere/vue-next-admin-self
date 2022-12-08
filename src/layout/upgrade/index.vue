@@ -38,7 +38,7 @@ const { t } = useI18n();
 const storesThemeConfig = useThemeConfig();
 const { themeConfig } = storeToRefs(storesThemeConfig);
 const state = reactive({
-	isUpgrade: true,
+	isUpgrade: false,
 	// @ts-ignore
 	version: __VERSION__,
 	isLoading: false,

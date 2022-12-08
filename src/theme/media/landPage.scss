@@ -1,0 +1,378 @@
+
+
+/* 页面宽度小于1200px
+------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 376px){
+  html {
+    font-size:  50px !important;
+    .landPage-container{
+
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px){
+  html {
+    font-size: 44.44444444444444px !important;
+  }
+}
+// 移动端
+@media only screen  and (max-width: 751px){
+  html {
+    font-size: 50px !important;
+    .central-plate{
+      width: 6.86rem;
+      margin: 0 auto;
+    }
+    .landPage-container {
+      .landPage_nav {
+        background: url('/@/assets/com/img/landPage/bannerMobile.png') no-repeat 0 0;
+        height: 11.2rem;
+        opcity: 1;
+        .nav_logo {
+          margin: .4rem 0 0 0;
+        }
+        .nav_tablanguage {
+          margin: .32rem 0 1.23rem 0;
+          padding: 0 .19rem 0 .17rem;
+          font-size: .24rem;
+          .nav_tablanguage_icon{
+            width: .26rem;
+            height: .26rem;
+            background: url("/@/assets/com/img/landPage/globalM.png") no-repeat 0 0;
+            background-size: 100% 100%;
+            margin-top: .14rem;
+          }
+        }
+        .nav_content {
+          padding: 0 .66rem;
+          .nav_title {
+            margin-bottom: .41rem;
+            .nav_title_head {
+              width: 5.54rem;
+              height: 1.04rem;
+              font-size: .42rem;
+              margin-bottom: .32rem;
+            }
+            .nav_title_sub {
+              width: 5.1rem;
+              height: 1.18rem;
+              font-size: .28rem;
+              letter-spacing: .0015rem;
+            }
+          }
+          .nav_form {
+            width: 5rem;
+            height: 1rem;
+            background-color: #ffffff;
+          }
+        }
+      }
+      .howWork{
+        padding: .88rem .43rem 0 .43rem;
+        .howWork_title {
+          margin: 0 auto .8rem;
+          width: 4rem;
+        }
+        .howWork_content{
+          flex-flow: wrap-reverse;
+        }
+        .howWork_card_ri_reverse,
+        .howWork_card_lf {
+          width: 100%;
+          .card_subtitle {
+            width: 4.68rem;
+            height: .84rem;
+            font-size: .28rem;
+            line-height: .42rem;
+          }
+          .second_title {
+            margin-bottom: .48rem;
+            .second_title_icon {
+              width: .2rem;
+              height: .2rem;
+              background-color: rgba(32, 94, 255, 1);
+              margin-top: .1rem;
+            }
+            .second_title_content {
+              padding-right: 1rem;
+              .second_title_content_main {
+                font-size: .28rem;
+                margin-bottom: .2rem;
+              }
+              .second_title_content_sub {
+                font-size: .18rem;
+                width: 4.35rem;
+              }
+            }
+          }
+        }
+        .howWork_card_ri {
+          margin-bottom: .48rem;
+        }
+        .howWork_content_reverse{
+          flex-flow: column;
+          .howWork_card_ri_reverse{
+            width: 100%;
+          }
+        }
+       }
+      .works_that{
+        height: 12.85rem;
+        padding-top: 1.08rem;
+        .central-plate-that{
+          width: 6.9rem;
+        }
+        .works_that_title{
+          margin-bottom: .88rem;
+        }
+        .works_that_card{
+          justify-content: center;
+          .that_card{
+            .that_card_img{
+              width: 2.3rem;
+              height: 2.88rem;
+              margin-bottom: .53rem;
+            }
+          }
+        }
+      }
+      .work_protect{
+        height: 22.39rem;
+        .that_card{
+          width: 6rem;
+          height: 3.25rem;
+          padding: .38rem .59rem .38rem .38rem;
+          margin-bottom: .48rem;
+          .protect_card_img{
+            width: .76rem;
+            height: .76rem;
+            margin-bottom: .53rem;
+          }
+          .protect_card_foot {
+            margin-bottom: .32rem;
+            font-size: .28rem;
+            line-height: .28rem;
+          }
+          .protect_card_img_list{
+            span{
+              padding-top: .28rem;
+            }
+            .protect_card_img_list_demo{
+              width: .6rem;
+              height: .6rem;
+            }
+          }
+        }
+      }
+      .why_us{
+        .central-plate-why{
+          width: 5.91rem;
+          margin: 0 auto;
+        }
+        background: url("/@/assets/com/img/landPage/index/footerBannerW.png");
+        .that_card{
+          width: 2.56rem;
+          &:nth-child(1){
+            width: 2.9rem;
+            margin-bottom: .88rem;
+          }
+          .why_us_num{
+            font-size: .48rem;
+            line-height: .48rem;
+            margin-bottom: .24rem;
+          }
+          .why_us_num_sutitle{
+            font-size: .28rem;
+            line-height: .28rem;
+            margin-bottom: .24rem;
+          }
+          .why_us_num_title{
+            font-size: .24rem;
+            line-height: .36rem;
+          }
+        }
+      }
+    }
+  }
+}
+// pc
+@media only screen and (min-width: 750px){
+  html {
+    font-size: 100px !important;
+    .central-plate{
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .landPage-container {
+      .landPage_nav{
+        height: 8.35rem;
+        background: url('/@/assets/com/img/landPage/bannerWeb.png') no-repeat 0 0;
+        background-size: 100%  8.35rem;
+        .nav_logo{
+          margin: .16rem 0 1.98rem .15rem;
+        }
+        .nav_tablanguage {
+          margin: .17rem .15rem 0 0;
+          padding: 0 .18rem 0 .15rem;
+          font-size: .14rem;
+          .nav_tablanguage_icon{
+            width: .2rem;
+            height: .2rem;
+            background: url("/@/assets/com/img/landPage/globalW.png");
+            margin-top: .15rem;
+          }
+        }
+        .nav_content {
+          .nav_title {
+            margin-top: .11rem;
+            .nav_title_head {
+              width: 5.54rem;
+              height: 1.04rem;
+              font-size: .42rem;
+              margin-bottom: .32rem;
+            }
+            .nav_title_sub {
+              width: 5rem;
+              height: .79rem;
+              font-size: .2rem;
+            }
+          }
+          .nav_form {
+            width: 5rem;
+            height: 1rem;
+            background-color: #ffffff;
+          }
+        }
+      }
+      .howWork{
+        padding: .6rem 0;
+        .howWork_title{
+          margin: 0 auto .64rem;
+        }
+        .howWork_card_ri_reverse,
+        .howWork_card_lf{
+          width: 50%;
+          .card_subtitle{
+            width: 3.68rem;
+            height: .72rem;
+            font-size: .24rem;
+            line-height: .36rem;
+            margin-bottom: .6rem;
+          }
+          .second_title{
+            margin-bottom: .26rem;
+            .second_title_icon{
+              width: .2rem;
+              height: .2rem;
+              background-color: rgba(32, 94, 255, 1);
+              margin-top: .1rem;
+            }
+            .second_title_content{
+              padding-right: 1rem;
+              .second_title_content_main{
+                font-size: 28px;
+                margin-bottom: .2rem;
+              }
+              .second_title_content_sub{
+                font-size: 18px;
+                width: 4.35rem;
+              }
+            }
+            .second_title_content_mains{
+              width: 4.35rem;
+            }
+          }
+        }
+
+        .howWork_card_ri_reverse {
+          padding-left: 1.13rem;
+          .second_title_reverse {
+            .second_title_content {
+              padding-right: 0;
+              .second_title_content_main{
+                margin-bottom: .12rem;
+              }
+            }
+          }
+        }
+      }
+      .works_that{
+        height: 7.38rem;
+        padding-top: .6rem;
+        .works_that_title{
+          margin-bottom: .68rem;
+        }
+        .works_that_card{
+          .that_card{
+            .that_card_img{
+              width: 2.4rem;
+              height: 3rem;
+              margin-bottom: .47rem;
+            }
+          }
+        }
+
+      }
+      .work_protect{
+        .works_that_card{
+          justify-content: center;
+          .that_card {
+            width: 3.80rem;
+            height: 2.06rem;
+            padding: .24rem .39rem .24rem .24rem;
+            &:nth-child(1){
+              margin-right: .3rem;
+              margin-bottom: .32rem;
+            }
+            &:nth-child(2){
+              margin-right: .3rem;
+            }
+            &:nth-child(4){
+              margin-right: .3rem;
+            }
+            .protect_card_img {
+              width: .48rem;
+              height: .48rem;
+              margin-bottom: .38rem;
+            }
+            .protect_card_foot {
+              margin-bottom: .14rem;
+              font-size: .2rem;
+              line-height: .2rem;
+            }
+            .protect_card_img_list {
+              span{
+                padding-top: .2rem;
+              }
+              .protect_card_img_list_demo {
+                width: .38rem;
+                height: .38rem;
+              }
+            }
+          }
+        }
+      }
+      .why_us{
+        background: url("/@/assets/com/img/landPage/index/footerBannerW.png");
+        .that_card{
+          width: 2.56rem;
+          .why_us_num{
+            font-size: .36rem;
+            line-height: .36rem;
+            margin-bottom: .18rem;
+          }
+          .why_us_num_sutitle{
+            font-size: .2rem;
+            line-height: .2rem;
+            margin-bottom: .38rem;
+          }
+          .why_us_num_title{
+            font-size: .18rem;
+            line-height: .27rem;
+          }
+        }
+      }
+    }
+  }
+}
