@@ -22,6 +22,7 @@
 	--next-bg-topBarColor: var(--next-color-bar) !important;
 	--next-bg-menuBar: var(--next-color-disabled) !important;
 	--next-bg-menuBarColor: var(--next-color-bar) !important;
+	--next-bg-menuBarActiveColor: var(--next-color-hover-rgba) !important;
 	--next-bg-columnsMenuBar: var(--next-color-disabled) !important;
 	--next-bg-columnsMenuBarColor: var(--next-color-bar) !important;
 	--next-border-color-light: var(--next-border-black) !important;
@@ -105,9 +106,15 @@
 		background-color: var(--next-color-disabled) !important;
 	}
 
+	// topBar
+	.layout-navbars-breadcrumb-index {
+		background: none !important;
+	}
+
 	// menu
 	.layout-aside {
 		border-right: 1px solid var(--next-border-color-light) !important;
+		@extend .layout-navbars-breadcrumb-index;
 	}
 
 	// colorPicker

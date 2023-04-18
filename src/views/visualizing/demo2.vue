@@ -127,7 +127,7 @@
 			<div class="big-data-down-center">
 				<div class="big-data-down-center-one">
 					<div class="big-data-down-center-one-content" ref="rightChartData5">
-						<div ref="the3DEarth"></div>
+						<div id="3DEarth"></div>
 						<div :class="v.topLevelClass" v-for="(v, k) in state.earth3DBtnList" :key="k">
 							<div class="circle" v-for="i in 4" :key="i"></div>
 							<div class="text-box">
@@ -235,8 +235,6 @@ import 'echarts-gl';
 import { formatDate } from '/@/utils/formatTime';
 import { NextLoading } from '/@/utils/loading';
 import { dropdownList, skyList, dBtnList, earth3DBtnList, chartData4List } from './mock/demo2';
-import worldImg from './images/world.jpg';
-import bathymetryImg from './images/bathymetry.jpg';
 
 // 定义变量内容
 const rightChartData1 = ref();
@@ -259,7 +257,6 @@ const state = reactive<Demo2State>({
 	earth3DBtnList,
 	chartData4List,
 	myCharts: [],
-	the3DEarth: null,
 });
 
 // 初始化时间
@@ -690,13 +687,13 @@ const initRightChartData2 = () => {
 };
 // 3DEarth 地图
 const init3DEarth = (globeRadius: any) => {
-	let el = state.the3DEarth!;
+	let el = <HTMLElement>document.getElementById('3DEarth');
 	el.style.height = `${rightChartData5.value.offsetHeight}px`;
 	const myChart = echarts.init(el);
 	const option = {
 		globe: {
-			baseTexture: worldImg,
-			heightTexture: bathymetryImg,
+			baseTexture: 'https://i.hd-r.cn/4d572a171eb475da0c2e731d15b63aea.jpg',
+			heightTexture: 'https://i.hd-r.cn/52356e8d906c84c5e23390f829dec7a3.jpg',
 			shading: 'realistic',
 			light: {
 				ambient: {
@@ -791,7 +788,7 @@ onUnmounted(() => {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	background: url(https://img-blog.csdnimg.cn/6267533849444025811bf0840f9366e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAbHl0LXRvcA==,size_20,color_FFFFFF,t_70,g_se,x_16);
+	background: url(https://i.hd-r.cn/b1040178e4a2265fe87ffbb9bda839a4.jpg);
 	background-size: 100% 100%;
 	display: flex;
 	flex-direction: column;

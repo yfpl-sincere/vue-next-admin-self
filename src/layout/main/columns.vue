@@ -35,7 +35,7 @@ const updateScrollbar = () => {
 	// 更新父级 scrollbar
 	layoutScrollbarRef.value.update();
 	// 更新子级 scrollbar
-	layoutMainRef.value!.layoutMainScrollbarRef.update();
+	layoutMainRef.value && layoutMainRef.value!.layoutMainScrollbarRef.update();
 };
 // 重置滚动条高度，由于组件是异步引入的
 const initScrollBarHeight = () => {
@@ -60,9 +60,11 @@ watch(
 );
 // 监听 themeConfig 配置文件的变化，更新菜单 el-scrollbar 的高度
 watch(
-	themeConfig,
+	() => [themeConfig.value.isTagsview, themeConfig.value.isFixedHeader],
 	() => {
-		updateScrollbar();
+		nextTick(() => {
+			updateScrollbar();
+		});
 	},
 	{
 		deep: true,

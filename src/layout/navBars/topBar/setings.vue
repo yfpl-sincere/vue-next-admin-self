@@ -59,6 +59,17 @@
 						<el-color-picker v-model="getThemeConfig.menuBarColor" size="default" @change="onBgColorPickerChange('menuBarColor')"> </el-color-picker>
 					</div>
 				</div>
+				<div class="layout-breadcrumb-seting-bar-flex">
+					<div class="layout-breadcrumb-seting-bar-flex-label">{{ $t('message.layout.twoMenuBarActiveColor') }}</div>
+					<div class="layout-breadcrumb-seting-bar-flex-value">
+						<el-color-picker
+							v-model="getThemeConfig.menuBarActiveColor"
+							size="default"
+							show-alpha
+							@change="onBgColorPickerChange('menuBarActiveColor')"
+						/>
+					</div>
+				</div>
 				<div class="layout-breadcrumb-seting-bar-flex mt14">
 					<div class="layout-breadcrumb-seting-bar-flex-label">{{ $t('message.layout.twoIsMenuBarColorGradual') }}</div>
 					<div class="layout-breadcrumb-seting-bar-flex-value">
@@ -427,7 +438,7 @@ import { useThemeConfig } from '/@/stores/themeConfig';
 import { useChangeColor } from '/@/utils/theme';
 import { verifyAndSpace } from '/@/utils/toolsValidate';
 import { Local } from '/@/utils/storage';
-import Watermark from '/@/utils/wartermark';
+import Watermark from '/@/utils/watermark';
 import commonFunction from '/@/utils/commonFunction';
 import other from '/@/utils/other';
 import mittBus from '/@/utils/mitt';
@@ -483,14 +494,16 @@ const onColumnsMenuBarGradualChange = () => {
 };
 // 2、菜单 / 顶栏 --> 背景渐变函数
 const setGraduaFun = (el: string, bool: boolean, color: string) => {
-	setTimeout(() => {
-		let els = document.querySelector(el);
-		if (!els) return false;
-		document.documentElement.style.setProperty('--el-menu-bg-color', document.documentElement.style.getPropertyValue('--next-bg-menuBar'));
-		if (bool) els.setAttribute('style', `background:linear-gradient(to bottom left , ${color}, ${getLightColor(color, 0.6)}) !important;`);
-		else els.setAttribute('style', ``);
-		setLocalThemeConfig();
-	}, 200);
+	nextTick(() => {
+		setTimeout(() => {
+			let els = document.querySelector(el);
+			if (!els) return false;
+			document.documentElement.style.setProperty('--el-menu-bg-color', document.documentElement.style.getPropertyValue('--next-bg-menuBar'));
+			if (bool) els.setAttribute('style', `background:linear-gradient(to bottom , ${color}, ${getLightColor(color, 0.5)})`);
+			else els.setAttribute('style', ``);
+			setLocalThemeConfig();
+		}, 300);
+	});
 };
 // 2、分栏设置 ->
 const onColumnsMenuHoverPreloadChange = () => {
@@ -577,6 +590,7 @@ const onSetLayout = (layout: string) => {
 const initLayoutChangeFun = () => {
 	onBgColorPickerChange('menuBar');
 	onBgColorPickerChange('menuBarColor');
+	onBgColorPickerChange('menuBarActiveColor');
 	onBgColorPickerChange('topBar');
 	onBgColorPickerChange('topBarColor');
 	onBgColorPickerChange('columnsMenuBar');
@@ -620,7 +634,7 @@ const onResetConfigClick = () => {
 	Local.clear();
 	window.location.reload();
 	// @ts-ignore
-	Local.set('version', __VERSION__);
+	Local.set('version', __NEXT_VERSION__);
 };
 // 初始化菜单样式等
 const initSetStyle = () => {

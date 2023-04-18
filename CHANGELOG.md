@@ -2,6 +2,87 @@
 
 🎉🎉🔥 `vue-next-admin` 基于 vue3.x 、Typescript、vite、Element plus 等，适配手机、平板、pc 的后台开源免费模板库（vue2.x 请切换 vue-prev-admin 分支）
 
+## 2.4.33
+
+`2023.04.11`
+
+- 🌟 更新 依赖更新最新版本
+- 🎉 新增 `/make/tableDemo` 中添加打印、图片预览功能
+- 🐞 修复 菜单收起时（isCollapse），图标不居中问题
+- 🐞 修复 演示 `权限管理 -> 前端控制 -> 页面权限` 切换不生效，感谢群友@傲世盛唐
+- 🐞 修复 `"typescript": "5.x"` 中 `tsconfig.json`，`compilerOptions.suppressImplicitAnyIndexErrors` 弃用问题 [TypeScript/issues/51909](https://github.com/microsoft/TypeScript/issues/51909)、[suppressImplicitAnyIndexErrors](https://www.typescriptlang.org/tsconfig#suppressImplicitAnyIndexErrors)
+- 🎨 合并 [!47cdn 打包支持 pnpm，消除无 external 的报错](https://gitee.com/lyt-top/vue-next-admin/commit/8de54a844bb54468d0bdccca158bf9bcb449f270)，感谢[@yujiacheng](https://gitee.com/YujiaCheng1996)
+- 🎯 优化 `layout/navBars/breadcrumb` 文件夹名称改成 `layout/navBars/topBar` 更易理解（`可全局替换`），感谢群友@傲世盛唐
+- 🎯 优化 `layout/navBars/topBar/user.vue` 组件，`UserNews` 点击消息图标触发范围，改用 [element plus Popover 气泡卡片 虚拟触发方式](https://element-plus.org/zh-CN/component/popover.html#%E8%99%9A%E6%8B%9F%E8%A7%A6%E5%8F%91)，防止点击消息通知背景色时不触发 `Popover` 弹出框
+
+## 2.4.32
+
+💔💔💔 图片不显示问题（README.md、演示中使用的图片，[vue-next-admin-images](https://gitee.com/lyt-top/vue-next-admin-images)），通过网站 [https://www.hd-r.cn/](https://www.hd-r.cn/) 转在线链接，如若侵权请联系作者 qq：1105290566
+
+`2023.03.26`
+
+- 🌟 更新 依赖更新最新版本
+- 🐞 修复 [关于开发环境 sourceMap 的问题](https://gitee.com/lyt-top/vue-next-admin/issues/I6DNDQ)，感谢[@XiaoSongJiang](https://gitee.com/XiaoSongJiang)
+- 🐞 修复 打包提示 `[@vue/compiler-sfc] ::v-deep usage as a combinator has been deprecated. Use :deep(<inner-selector>) instead.`，不能使用 `:deep {}`，而应使用 `:deep() {}`
+- 🎨 合并 [feat: 一级菜单重定向为空，分栏模式下，点击一次菜单时现在会切换子菜单列表，而不是打开空白页](https://gitee.com/lyt-top/vue-next-admin/commit/a91f84e3a1a86d8d303a5b46171622913d9d0737)，感谢[@写意](https://gitee.com/xjj_0906)
+- 🎯 优化 经典布局分割菜单只有一项子级时，收起左侧导航菜单
+- 🎯 优化 watch 监听范围
+- 🎯 优化 打包：分包（manualChunks）、gzip 压缩、cdn 加速 `默认关闭 .env 中开启`（可查看文章[vue-next-admin vue3 + vite 打包 gzip 压缩、cdn 加速](https://blog.csdn.net/qq_34450741/article/details/129766676)）
+
+## 2.4.31
+
+`2023.03.10`
+
+- 🌟 更新 依赖更新最新版本
+- 🐞 修复 顶栏背景渐变设置不生效
+- 🐞 修复 顶栏背景渐变、菜单背景渐变时，深色主题不生效
+- 🐞 修复 顶栏搜索框移动端显示问题
+- 🎯 优化 `main.ts`，相关 issues [#I6KNFH](https://gitee.com/lyt-top/vue-next-admin/issues/I6KNFH)、[#I6JRH6](https://gitee.com/lyt-top/vue-next-admin/issues/I6JRH6)
+- 🎯 优化 菜单横向模式显示（horizontal）
+- 🎯 优化 分栏布局，[希望分栏布局做一下优化，在没有二级菜单的时候，直接全屏展示一级菜单链接](https://gitee.com/lyt-top/vue-next-admin/issues/I6HW7H)，感谢[@jiuping](https://gitee.com/jiuping)，`tagsview` 点击时处理 `收起/展开` 菜单
+
+## 2.4.3
+
+`2023.02.22`
+
+🚩🚩🚩 感谢 [驰骋工作流引擎-表单引擎-低代码开发平台](http://www.ccflow.org/) 赞助商的赞助。驰骋公司为社会提供流程引擎+表单引擎+低代码开发平台一体的开源软件解决方案，欢迎广大开发者前去体验！
+
+- 🌟 更新 依赖更新最新版本
+- 🎉 新增 赞助商组件（`/src/layout/sponsors`），[项目目录结构查看](https://lyt-top.gitee.io/vue-next-admin-doc-preview/config/)
+- 🐞 修复 [过滤筛选组件展开点击不了](https://gitee.com/lyt-top/vue-next-admin/issues/I688WG)
+- 🐞 修复 [设置锁屏时间时直接白屏了不能恢复，除非删除主题配置才会重新加载](https://gitee.com/lyt-top/vue-next-admin/issues/I6AF8P)，感谢[@baizunxian](https://gitee.com/xb_xiaobai)
+- 🐞 修复 `分栏布局` 地址栏输入不存在的路由报错问题
+- 🎨 合并 [!44 tagsViewName 正则匹配错误，匹配到含 en 单词](https://gitee.com/lyt-top/vue-next-admin/pulls/44/files)，感谢[@tony 星](https://gitee.com/tony_tong_xin)
+- 🎨 合并 [!45 fix 地址栏出现 false 问题](https://gitee.com/lyt-top/vue-next-admin/pulls/45)，感谢[@随心](https://gitee.com/jiangqiang1996)
+- 🎯 优化 `/src/utils/storage` 下 `key` 编写成 `${__NEXT_NAME__}:${key}`，防止部署多套系统到同一域名不同目录时，变量共用的问题（`__NEXT_NAME__`为 `package.json` 中的 `name`）
+- 🎯 优化 watermark 单词拼写错误
+
+## 2.4.21
+
+`2022.12.12`
+
+- 🌟 更新 依赖更新最新版本
+- 🎉 新增 菜单背景高亮颜色可自定义，通过 `布局配置 -> 菜单设置 -> 菜单高亮背景色` 进行设置
+- 🐞 修复 `分栏布局` 二级导航菜单内容多时，无法滚动问题，感谢群友@静雨轩主人
+- 🐞 修复 [!42 修复 工作流无法添加新节点问题](https://gitee.com/lyt-top/vue-next-admin/pulls/42)，感谢[@beta](https://gitee.com/beta_dz)
+- 🎯 优化 `/make/tableDemo` 表头很多时，无法滚动问题，感谢群友@糊涂涂涂
+
+## 2.4.2
+
+`2022.12.09`
+
+- 🌟 更新 依赖更新最新版本
+- 🎉 新增 国际化自动导入文件功能，只需在 `/src/i18n/pages` 下新建文件夹定义即可
+- 🎉 新增 `/make/tableDemo` 中 [搜索框展开，收缩功能，高级筛选组件 有计划做吗](https://gitee.com/lyt-top/vue-next-admin/issues/I6511L)
+- 🐞 修复 [!40 开启 TagsView 缓存后，刷新后所有的路由都变成组件缓存了](https://gitee.com/lyt-top/vue-next-admin/pulls/40)，感谢[@mrjimin](https://gitee.com/mrjimin)
+- 🐞 修复 [!41 修复 get 请求传递嵌套对象或数组时无法正常编码问题](https://gitee.com/lyt-top/vue-next-admin/pulls/41)，感谢[@随心](https://gitee.com/jiangqiang1996)
+- 🐞 修复 组件 wangEditor 回显值的问题
+- 🐞 修复 `/fun/echartsMap`（地理坐标/地图）、`visualizingDemo2`（数据可视化演示 2） 演示报错问题
+- 🎯 优化 版本升级提示
+- 🎯 优化 无权限登录时增加提示信息，[BUG：因前端加载路由(initFrontEndControlRoutes)中当前用户角色为一个陌生角色, 导致 router.beforeEach 会死循环 浏览器崩溃](https://gitee.com/lyt-top/vue-next-admin/issues/I64HVO)，感谢[@canroc](https://gitee.com/canroc)、[@随心](https://gitee.com/jiangqiang1996)
+- 🌈 重构 `/views/system` 新增修改组件合并。[可以把新增修改组件合并成一个吧](https://gitee.com/lyt-top/vue-next-admin/issues/I64WES)
+- 🌈 重构 图标选择器，[图标选择器没办法筛选，只能筛选 ali 的](https://gitee.com/lyt-top/vue-next-admin/issues/I64HZD)，感谢[@随心](https://gitee.com/jiangqiang1996)
+
 ## 2.4.1
 
 `2022.11.30`
@@ -82,7 +163,7 @@
 - 🎯 优化 图标选择器 icon type 类型为 all 时，类型 ali、ele、awe 回显问题
 - 🎯 优化 去掉开发环境 i18n 控制台警告，页面代码：[i18n/index.ts](https://gitee.com/lyt-top/vue-next-admin/blob/master/src/i18n/index.ts)
 - 🎯 优化 `NextLoading.start()` 方法，防止第一次进入界面时出现短暂空白
-- 🎯 优化 地址栏有参数退出登录，再次登录不跳之前界面问题 `src/layout/navBars/breadcrumb/user.vue`
+- 🎯 优化 地址栏有参数退出登录，再次登录不跳之前界面问题 `src/layout/navBars/topBar/user.vue`
 - 🎯 优化 `SvgIcon` 组件，防止 `开启 Tagsview 图标` 时，`tagsView 右键菜单关闭` 报错问题，工作流不可连线、全屏时关闭按钮消失问题
 - 🎯 优化 [如果 url 中有中文等特殊字符，第一次切换该 tab 时 keep-alive 失效#I55JS7](https://gitee.com/lyt-top/vue-next-admin/issues/I55JS7),感谢[yuyong1566](https://gitee.com/yuyong1566)
 - 🎯 优化 [wangEditor](https://www.wangeditor.com/) 更新到 v5，[vue3 版本线上示例中 wangeditor 富文本编辑器 demo 实例,无法换行#I5565B](https://gitee.com/lyt-top/vue-next-admin/issues/I5565B)，感谢@[jenchih](https://gitee.com/jenchih)
